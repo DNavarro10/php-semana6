@@ -2,7 +2,7 @@
 	include 'conn/conexion.php';
 
 
-	function insertCompra($cedula, $rol, $nombre, $clave, $direccion, $telefono){
+	function insertUsuario($cedula, $rol, $nombre, $clave, $direccion, $telefono){
 		
 		$conn = conectar();
 		/* insertar*/
@@ -17,7 +17,7 @@
 		desconectar($conn);
 	}
 
-	function updateCompra($cedula){
+	function updateUsuario($cedula){
 		$conn = conectar();
 		/* actualizar */
 		$sql = "UPDATE usuarios SET cedula = '$cedula', rol = '$rol', nombre = '$nombre', clave = '$clave', direccion = '$direccion', telefono = '$telefono'" ;
@@ -32,7 +32,7 @@
 	
 	}
 
-	function deleteCompra($cedula){
+	function deleteUsuario($cedula){
 		$conn = conectar();
 		/* borrar */
 		$sql = "DELETE FROM usuarios WHERE cedula = $cedula";
@@ -47,7 +47,7 @@
 
 	}
 
-	function mostrarCompra($cedula){
+	function mostrarUsuario($cedula){
 		$conn = conectar();
 		/* select */
 		$sql = "SELECT * FROM usuarios ORDER BY cedula ASC";
