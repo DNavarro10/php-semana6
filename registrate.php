@@ -1,10 +1,5 @@
 <?php session_start();
 
-require 'PHP/usuarios.php';
-
-if (isset($_SESSION['usuario'])){
-	header('Location: index.php');
-}
 
 
 //revibir datos
@@ -18,6 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				FILTER_SANITIZE_STRING
 				para evitar injecciones de codigo
 	*/
+	
 	$usuario = filter_var(strtolower($_POST['cedula']), FILTER_SANITIZE_STRING);
 	$rol = filter_var(strtolower($_POST['rol']), FILTER_SANITIZE_STRING);
 	$nombre = filter_var(strtolower($_POST['nombre']), FILTER_SANITIZE_STRING);
@@ -29,17 +25,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$errores = '';
 	
 	/* comprobar conexion*/
-	if (empty($usuario) or empty($password) or empty($password2)){
+	if (empty($usuario) or empty($rol) or empty($nombre) or empty($clave) or empty($direccion) or empty($telefono)){
 		$errores .= '<li>Por favor llenar los datos faltantes</li>';
 	} else {
 		try{
-			insertUsuario($usuario,$rol,$nombre,$clave,$direccion,$telefono);
+			$conexion = new PDO('mysql:host=localhost; dbname=computodo','root', '');
 		} catch(PDOException $e){
 			echo "Error: " . $e->getMessage();
 		}
-		/* verificar si existe usuario
-		 	PREPARE para preparar la consulta , :USUARIO por placeholder
-		*/
 		
 		$estado = $conexion->prepare('SELECT * FROM usuarios WHERE usuarios = :usuario LIMIT 1');
 		$estado->execute(array(':usuario' => $usuario));
@@ -49,23 +42,28 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if ($resultado != false){
 			$errores .= '<li>El usuario ya existe</li>';
 		}
+		
 	
 	}
 	/* si error = '' , no hay errores*/
 	if($errores == ''){
-		$estado = $conexion->prepare('INSERT INTO usuarios (id, usuario, pass) 
-		VALUES (null, :usuario, :pass)');
+		$estado = $conexion->prepare('INSERT INTO usuarios (cedula, rol, nombre, clave, direccion, telefono) VALUES  (:usuario, :rol, :nombre, :clave, :direccion, :telefono)');
 		
 		$estado ->execute(array(
 			':usuario'=> $usuario, 
-			':pass' => $password
+			':rol' => $rol,
+			':nombre'=> $nombre,
+			':clave'=> $clave,
+			':direccion'=>$direccion,
+			':telefono'=>$telefono
 		));
 		
 		
+		header('Location: login.php');
 	}
 
 }
 
 	/* Vista del formulario */
-	require 'Vistas/registrate.view.php';
+	require 'vistas/registrate.view.php';
 ?>

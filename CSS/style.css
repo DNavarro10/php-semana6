@@ -45,7 +45,7 @@ body {
 	margin-bottom: 20px;
 }
 .contenedor2{
-	width: 700px;
+	width: 800px;
 	margin: auto;
 	max-width: 90%;
 }
@@ -79,7 +79,7 @@ body {
 .formulario input[type="text"],
 .formulario input[type="password"],
 .formulario .picker, p{
-	padding: 15px;
+	padding: 10px;
 	font-family: 'Raleway',sans-serif;
 	font-size: 18px;
 	border: none;
@@ -179,10 +179,4 @@ body {
 	height: 48px;
 	text-align: center;
 	
-}
-.btn-primary{
-	
-	padding: 6px;
-	width: 100px;
-	border-radius: 10px;
 }

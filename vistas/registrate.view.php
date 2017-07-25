@@ -31,7 +31,7 @@
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-lock"></i><input type="text" name="clave" class="usuario" placeholder="Contraseña" required="">
+						<i class="icono izquierda fa fa-lock"></i><input type="password" name="clave" class="usuario" placeholder="Contraseña" required="">
 					</div>
 					
 					<div class="form-group">
@@ -54,7 +54,7 @@
 					<?php endif; ?>
 					
 					<div class="group-btn">
-						<input type="submit" class="btn-primary" value="Enviar" name="enviar">
+						<input type="submit" class="btn btn-primary" value="Crear" name="enviar">
 					</div>
 				</form>	
 			</div>

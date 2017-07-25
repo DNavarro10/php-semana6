@@ -3,13 +3,13 @@
 
 class conexion{
 		
-	public $host = "localhost";
-	public $user = "root";
-	public $pass = "";
-	public $db = "computodo";
-
-			
+	
 	function conectar(){
+	$host = "localhost";
+	$user = "root";
+	$pass = "";
+	$db = "computodo";
+
 			
 		$conn = mysqli_connect($host,$user,$pass,$db);
 
@@ -25,3 +25,5 @@ class conexion{
 
 }
 ?>
+
+

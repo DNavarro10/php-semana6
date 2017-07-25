@@ -1,32 +1,33 @@
 <?php 
-	include 'conn/conexion.php';
 
+include 'conn/conexion.php';
 
+	
+	$conn = new conexion();
+	$conn->conectar();
+	
 	function insertUsuario($cedula, $rol, $nombre, $clave, $direccion, $telefono){
 		
+		if(isset($_POST['crear'])){
 		$conn = conectar();
 		/* insertar*/
 		$sql = "INSERT into usuarios (cedula, rol, nombre, clave, direccion, telefono) VALUES (".$cedula.",".$rol.",".$nombre.",".$clave.",".$direccion.",".$telefono.")";
 		
-		if (mysqli_query($conn, $sql)){
-			return true;
-		}else {
-			return false;
-		}
+		$resultado = mysqli_query($conn, $sql);
 		
-		desconectar($conn);
+		}
+		mysqli_close($conn);
 	}
 
 	function updateUsuario($cedula){
+
+		
 		$conn = conectar();
 		/* actualizar */
 		$sql = "UPDATE usuarios SET cedula = '$cedula', rol = '$rol', nombre = '$nombre', clave = '$clave', direccion = '$direccion', telefono = '$telefono'" ;
 		
 		if (mysqli_query($conn, $sql)){
-			return true;
-		}else {
-			return false;
-		}
+		
 		
 		desconectar($conn);
 	
@@ -59,7 +60,7 @@
 		}
 		
 		desconectar($conn);
-		
+	}
 	}
 
-?>
+	?>

@@ -9,11 +9,11 @@ $errores = '';
 /* comprobar si los datos an sido enviados*/
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$usuario = filter_var(strtolower($_POST['usuario']), FILTER_SANITIZE_STRING);
-	$password = $_POST['password'];
-	$password = hash('sha512' , $password);
+	$password = filter_var(strtolower($_POST['password']), FILTER_SANITIZE_STRING);;
+	$rol = filter_var(strtolower($_POST['rol']), FILTER_SANITIZE_STRING);;
 	
 	try{
-		$conexion = new PDO('mysql:host=localhost; dbname=login','root', '');
+		$conexion = new PDO('mysql:host=localhost; dbname=computodo','root', '');
 	} catch (PDOException $e){
 		echo "error: " . $e->getMessage();;
 	}
@@ -21,12 +21,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	/* Verificar si hay usuarios*/
 	
 	$estado = $conexion ->prepare('
-	SELECT * FROM usuarios WHERE usuario = :usuario AND pass = :password'
+	SELECT * FROM usuarios WHERE cedula = :cedula AND clave = :clave AND rol = :rol'
 	);
 	
 	$estado->execute(array(
-		':usuario' =>$usuario,
-		':password' =>$password
+		':cedula' =>$usuario,
+		':clave' =>$password,
+		':rol'=>$rol
 	));
 	
 	$resultado = $estado->fetch();

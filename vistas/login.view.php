@@ -16,16 +16,16 @@
 			<div class="contenido">
 				<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="formulario" name="login" method="post">
 					<div class="form-group">
-						<i class="icono izquierda fa fa-id-card"></i><select name="" id="" class="picker">
+						<i class="icono izquierda fa fa-id-card"></i><select name="rol" id="rol" class="picker">
 						<option value="Administrador">Administrador</option>
 						<option value="Comprador">Comprador</option>
 						</select><p>Seleccionar Rol</p>
 					</div>
 					<div class="form-group">
-						<i class="icono izquierda fa fa-user"></i><input type="text" name="usuario" class="usuario" placeholder="Usuario" required="">
+						<i class="icono izquierda fa fa-user"></i><input type="text" name="usuario" class="usuario" placeholder="Numero de Cedula" required="">
 					</div>
 					<div class="form-group">
-						<i class="icono izquierda fa fa-lock"></i><input type="password" name="password" class="password_btn" placeholder="Repetir contraseña" required=""><i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
+						<i class="icono izquierda fa fa-lock"></i><input type="password" name="password" class="password_btn" placeholder="Introducir Clave" required=""><i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
 					</div>
 					<?php if(!empty($errores)): ?>
 						<div class="error">
