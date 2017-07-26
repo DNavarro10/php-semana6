@@ -6,7 +6,7 @@
 	<script src="https://use.fontawesome.com/323a076c8b.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="./../CSS/style.css">
 	<title>Registro</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 		<h1 class="titulo">Usuario</h1>
 		<hr class="border">
 			<div class="contenido">
-				<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="formulario" name="login" method="post">
+				<form action="./../registrate.php" class="formulario" name="login" method="post">
 					
 					<div class="form-group">
 						<i class="icono izquierda fa fa-id-card-o"></i><input type="text" name="cedula" class="usuario" placeholder="Cedula" required="">
@@ -55,6 +55,7 @@
 					
 					<div class="group-btn">
 						<input type="submit" class="btn btn-primary" value="Crear" name="enviar">
+						<a href="./../registrate.php">volver</a>
 					</div>
 				</form>	
 			</div>

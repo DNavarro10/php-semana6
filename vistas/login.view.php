@@ -19,7 +19,7 @@
 						<i class="icono izquierda fa fa-id-card"></i><select name="rol" id="rol" class="picker">
 						<option value="Administrador">Administrador</option>
 						<option value="Comprador">Comprador</option>
-						</select><p>Seleccionar Rol</p>
+						</select><p class="rol">Seleccionar Rol</p>
 					</div>
 					<div class="form-group">
 						<i class="icono izquierda fa fa-user"></i><input type="text" name="usuario" class="usuario" placeholder="Numero de Cedula" required="">
@@ -36,10 +36,7 @@
 					<?php endif; ?>
 				</form>	
 			</div>
-			<p class="texto-registrate">
-				No tienes cuenta?
-				<a id="cerrar" href="registrate.php">Crear cuenta</a>
-			</p>
+		
 	</div>
 	
 </body>
