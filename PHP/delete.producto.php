@@ -13,11 +13,11 @@
 		exit();
 		}
 
-$cedula = $_GET['cedula'];
+$producto = $_GET['producto'];
  
 //deleting the row from table
-$result = mysqli_query($conn, "DELETE FROM usuarios WHERE cedula = $cedula");
+$result = mysqli_query($conn, "DELETE FROM productos WHERE idProductos = $producto");
 
-header('location: ../registrate.php')
+header('location: ../productos.php')
 
  ?>

@@ -1,5 +1,5 @@
-<?php include_once("PHP/update.usuario.php");?>
-<?php include_once("PHP/asociar.usuario.php");?>
+<?php include_once("../PHP/update.usuario.php");?>
+<?php include_once("../PHP/asociar.usuario.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +16,10 @@
 		<h1 class="titulo">Editar</h1>
 		<hr class="border">
 			<div class="contenido">
-				<form action="./../registrate.php" class="formulario" name="login" method="post">
+				<form action="registro.editar.view.php" class="formulario" name="login" method="post">
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-id-card-o"></i><input type="text" name="cedula" class="usuario" placeholder="Cedula" required="">
+						<i class="icono izquierda fa fa-id-card-o"></i><input type="text" name="cedula" class="usuario" placeholder="Cedula" value="<?php echo $cedula;?>">
 					</div>
 					
 					<div class="form-group">
@@ -29,19 +29,19 @@
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-user-circle"></i><input type="text" name="nombre" class="password" placeholder="Nombre" required="">
+						<i class="icono izquierda fa fa-user-circle"></i><input type="text" name="nombre" class="password" placeholder="Nombre" value="<?php echo $nombre;?>">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-lock"></i><input type="password" name="clave" class="usuario" placeholder="Contraseña" required="">
+						<i class="icono izquierda fa fa-lock"></i><input type="password" name="clave" class="usuario" placeholder="Contraseña" value="<?php echo $clave;?>">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-home"></i><input type="text" name="direccion" class="usuario" placeholder="Dirección" required="">
+						<i class="icono izquierda fa fa-home"></i><input type="text" name="direccion" class="usuario" placeholder="Dirección" value= "<?php echo $direccion;?>">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-phone"></i><input type="text" name="telefono" class="usuario" placeholder="Telefono" required="">
+						<i class="icono izquierda fa fa-phone"></i><input type="text" name="telefono" class="usuario" placeholder="Telefono" value=" <?php echo $telefono;?>">
 					</div>
 					<div class="form-group">
 						
@@ -56,7 +56,8 @@
 					<?php endif; ?>
 					
 					<div class="group-btn">
-						<input type="submit" class="btn btn-primary" value="Crear" name="enviar">
+						<input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
+						<input type="submit" class="btn btn-primary" value="Editar" name="actu">
 						<a href="./../registrate.php">volver</a>
 					</div>
 				</form>	

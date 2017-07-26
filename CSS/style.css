@@ -110,8 +110,12 @@ header nav a:hover{
 }
 .contenedor2{
 	width: 1000px;
+	
 	margin: auto;
 	max-width: 90%;
+}
+.contenido2{
+	height: 390px;
 }
 .titulo {
 	font-weight: 300;

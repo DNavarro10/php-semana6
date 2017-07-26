@@ -17,3 +17,5 @@ CREATE TABLE `computodo`.`servicios` ( `idServicio` INT NOT NULL , `nombre` VARC
 /* compras */
 
 CREATE TABLE `computodo`.`compras` ( `cedula` INT NOT NULL , `idProducto` INT NOT NULL , `idServicio` INT NOT NULL , `cantidad` INT NOT NULL , PRIMARY KEY (`cedula`)) ENGINE = InnoDB;
+
+

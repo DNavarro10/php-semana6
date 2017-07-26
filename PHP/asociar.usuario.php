@@ -14,18 +14,18 @@
 		}
 
 
-	$cedula = $_GET['cedula'];
+	$id = $_GET['id'];
 
 
-	$result = mysqli_query($conn, "SELECT * FROM usuarios WHERE cedula=$cedula");
+	$result = mysqli_query($conn, "SELECT * FROM usuarios WHERE cedula = $id");
 
 	while($mostrar = mysqli_fetch_array($result))
 		{
 			$cedula = $mostrar['cedula'];
-			$nombre = $mostrar['rol'];
-			$ape_1 = $mostrar['nombre'];
-			$ape_2 = $mostrar['clave'];
-			$edad = $mostrar['direccion'];
-			$tel = $mostrar['telefono'];
+			$rol = $mostrar['rol'];
+			$nombre = $mostrar['nombre'];
+			$clave = $mostrar['clave'];
+			$direccion = $mostrar['direccion'];
+			$telefono = $mostrar['telefono'];
 		}
 ?>

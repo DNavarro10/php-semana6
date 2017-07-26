@@ -9,7 +9,7 @@
 	<title>Contenido</title>
 </head>
 <body>
-	<div class="contenedor contenedor2">
+	<div class="contenedor contenedor2 ">
 	
 		<header>
 			
