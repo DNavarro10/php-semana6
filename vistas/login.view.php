@@ -6,6 +6,8 @@
 	<script src="https://use.fontawesome.com/323a076c8b.js"></script>
 	<link rel="stylesheet" href="CSS/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<script type="text/javascript" charset="utf-8" src="js/jquery-
+	3.2.1.min.js"></script>
 	
 	<title>Registro</title>
 </head>

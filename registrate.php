@@ -65,5 +65,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 	/* Vista del formulario */
-	require 'vistas/usuarios.view.php';
+	require 'vistas/usuarios/usuarios.view.php';
 ?>

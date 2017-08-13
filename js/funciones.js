@@ -1,0 +1,4 @@
+
+function atras(){
+	history.back();
+}

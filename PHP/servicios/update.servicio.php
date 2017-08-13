@@ -12,7 +12,7 @@
 		echo "Hay error en la conexion";
 		exit();
 		}
- 
+
 if(isset($_POST['actu'])){    	{
   		$id = $_POST['id']; /* campo hidden*/	
 	

@@ -1,6 +1,5 @@
 <?php 
 
-
 	$host = "localhost";
 	$user = "root";
 	$pass = "";
@@ -13,6 +12,12 @@
 		echo "Hay error en la conexion";
 		exit();
 		}
-/* buscar datos */
-$resultado = mysqli_query($conn, "SELECT * FROM productos ORDER BY idProducto ASC"); 
-?>
+
+$cedula = $_GET['cedula'];
+ 
+//deleting the row from table
+$result = mysqli_query($conn, "DELETE FROM usuarios WHERE cedula = $cedula");
+
+header('location: ../../registrate.php')
+
+ ?>

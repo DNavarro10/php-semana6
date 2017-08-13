@@ -60,5 +60,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 	/* Vista del formulario */
-	require 'vistas/productos.view.php';
+	require 'vistas/productos/productos.view.php';
 ?>

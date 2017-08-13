@@ -8,20 +8,22 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="CSS/style.css">
-	<title>Contenido</title>
+<script type="text/javascript" charset="utf-8" src="js/jquery-
+	3.2.1.min.js"></script>
+	<link rel="stylesheet" href="./CSS/style.css">
+	<title>Productos</title>
 </head>
 <body>
 	<div class="contenedor contenedor2">
 	
 		<header>
-			<h3 class="titulo">Usuario</h3>
+			<h3 class="titulo">Productos</h3>
 
 			<nav>
 				<a href="login.php">Inicio</a>
-				<a href="#">Usuarios</a>
-				<a href="productos.php">Productos</a>
-				<a href="#">Servicios</a>
+				<a href="registrate.php">Usuarios</a>
+				<a href="#" style="background:#f75c0a;">Productos</a>
+				<a href="servicios.php">Servicios</a>
 				<a href="#">Compras</a>
 			</nav>
 		</header>
@@ -33,35 +35,31 @@
 					 <div class="main">
 						<div class="formulario">
 							<div class="warp">
-							 <h2>Usuarios</h2>
+							 <h2>Agregar productos</h2>
 								<table class="table table-sm table-hover table-striped">
 									<tr>
-										<td>Cedula</td>
-										<td>Rol</td>
+										<td>ID</td>
 										<td>Nombre</td>
-										<td>Clave</td>
-										<td>Direccion</td>
-										<td>Telefono</td>
+										<td>Descripcion</td>
+										<td>Precio Unit</td>
 										<td>Acciones</td>
 									</tr>
-									<?php include_once("PHP/mostrar.usuario.php")?>
+									<?php include_once("PHP/productos/mostrar.producto.php")?>
 									<?php 
 									/* llenar los campos desde la base de datos*/
 									while($mostrar = mysqli_fetch_array($resultado)) {         
 										echo "<tr>";
-										echo "<td>".$mostrar['cedula']."</td>";
-										echo "<td>".$mostrar['rol']."</td>";
+										echo "<td>".$mostrar['idProductos']."</td>";
 										echo "<td>".$mostrar['nombre']."</td>";
-										echo "<td>".$mostrar['clave']."</td>";    
-										echo "<td>".$mostrar['direccion']."</td>";
-										echo "<td>".$mostrar['telefono']."</td>";    
-										echo "<td><a href=\"vistas/registro.editar.view.php?cedula=$mostrar[cedula]\">Editar</a> | <a href=\"PHP/delete.usuario.php?cedula=$mostrar[cedula]\" onClick=\"return confirm('Desea eliminar?')\">Borrar</a></td>";        
+										echo "<td>".$mostrar['descripcion']."</td>";
+										echo "<td>".$mostrar['precioUnitario']."</td>";       
+										echo "<td><a href=\"vistas/usuarios/registro.editar.view.php?cedula=$mostrar[idProductos]\">Editar</a> | <a href=\"PHP/usuario/delete.usuario.php?cedula=$mostrar[idProductos]\" onClick=\"return confirm('Desea eliminar?')\">Borrar</a></td>";        
 									}
 									?>
 
 								</table>               
 							</div>
-							<a href='vistas/usuario.insert.view.php'><button class="btn btn-primary">Nuevo</button></a>
+							<a href='vistas/productos/productos.insert.view.php'><button class="btn btn-primary">Nuevo</button></a>
 						</div>
 					</div>
 			</div>

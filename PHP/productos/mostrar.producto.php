@@ -1,5 +1,6 @@
 <?php 
 
+
 	$host = "localhost";
 	$user = "root";
 	$pass = "";
@@ -12,12 +13,6 @@
 		echo "Hay error en la conexion";
 		exit();
 		}
-
-$producto = $_GET['producto'];
- 
-//deleting the row from table
-$result = mysqli_query($conn, "DELETE FROM productos WHERE idProductos = $producto");
-
-header('location: ../productos.php')
-
- ?>
+/* buscar datos */
+$resultado = mysqli_query($conn, "SELECT * FROM productos ORDER BY idProductos ASC"); 
+?>

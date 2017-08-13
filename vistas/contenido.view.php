@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="CSS/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<script type="text/javascript" charset="utf-8" src="js/jquery-
+	3.2.1.min.js"></script>
 	<title>Contenido</title>
 </head>
 <body>
@@ -13,22 +15,22 @@
 	
 		<header>
 			
-			<div class="flex"><h3 class="titulo">Compu Todo</h3></div>
+			<div class="flex"><h3 class="titulo">Compu Todo - Admin</h3></div>
 
 			<nav>
-				<a href="#">Inicio</a>
+				<a href="#" style="background:#f75c0a;">Inicio</a>
 				<a href="registrate.php">Usuarios</a>
 				<a href="productos.php">Productos</a>
 				<a href="#">Servicios</a>
-				<a href="#">Compras</a>
+				<a href="compras.php">Compras</a>
 			</nav>
 		</header>
 		
 		
 		<hr class="border">
 			<div class="contenido contenido2">
-				
-				
+			
+
 			</div>
 	
 		<footer>
