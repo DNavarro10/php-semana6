@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$errores = '';
 	
 	/* comprobar conexion*/
-	if (empty($producto) or empty($nombre) or empty($descripcion) or empty($precioUnitario)){
+	if (empty($nombre) or empty($descripcion) or empty($precioUnitario)){
 		$errores .= '<li>Por favor llenar los datos faltantes</li>';
 	} else {
 		try{

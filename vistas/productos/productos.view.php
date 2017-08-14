@@ -53,7 +53,7 @@
 										echo "<td>".$mostrar['nombre']."</td>";
 										echo "<td>".$mostrar['descripcion']."</td>";
 										echo "<td>".$mostrar['precioUnitario']."</td>";       
-										echo "<td><a href=\"vistas/usuarios/registro.editar.view.php?cedula=$mostrar[idProductos]\">Editar</a> | <a href=\"PHP/usuario/delete.usuario.php?cedula=$mostrar[idProductos]\" onClick=\"return confirm('Desea eliminar?')\">Borrar</a></td>";        
+										echo "<td><a href=\"vistas/productos/productos.editar.view.php?idProductos=$mostrar[idProductos]\">Editar</a> | <a href=\"PHP/productos/delete.producto.php?idProductos=$mostrar[idProductos]\" onClick=\"return confirm('Desea eliminar?')\">Borrar</a></td>";        
 									}
 									?>
 

@@ -16,28 +16,24 @@
 		<h1 class="titulo">Nuevo Producto</h1>
 		<hr class="border">
 			<div class="contenido">
-				<form action="../../registrate.php" class="formulario" name="login" method="post">
+				<form action="../../productos.php" class="formulario" name="login" method="post">
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-id-card-o"></i><input type="text" name="cedula" class="usuario" placeholder="Cedula" required="">
+						<i class="icono izquierda fa fa-circle-o" hidden="hidden"></i><input type="text" name="producto" class="password" value="" hidden="hidden">
 					</div>
-					
 				
 					<div class="form-group">
-						<i class="icono izquierda fa fa-user-circle"></i><input type="text" name="nombre" class="password" placeholder="Nombre" required="">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="nombre" class="password" placeholder="Nombre" required="">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-lock"></i><input type="password" name="clave" class="usuario" placeholder="Contraseña" required="">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="descripcion" class="usuario" placeholder="Descripcion" required="">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-home"></i><input type="text" name="direccion" class="usuario" placeholder="Dirección" required="">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="precio" class="usuario" placeholder="Precio" required="">
 					</div>
 		
-					<div class="form-group">
-						
-					</div>
 					
 					<?php if(!empty($errores)): ?>
 						<div class="error">

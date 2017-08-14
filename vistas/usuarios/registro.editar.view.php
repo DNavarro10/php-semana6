@@ -1,5 +1,5 @@
-<?php include_once("../PHP/usuario/update.usuario.php");?>
-<?php include_once("../PHP/usuario/asociar.usuario.php");?>
+<?php include_once("../../PHP/usuario/update.usuario.php");?>
+<?php include_once("../../PHP/usuario/asociar.usuario.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script type="text/javascript" charset="utf-8" src="js/jquery-
 	3.2.1.min.js"></script>
-	<link rel="stylesheet" href="./../CSS/style.css">
+	<link rel="stylesheet" href="../../CSS/style.css">
 	<title>Registro</title>
 </head>
 <body>
@@ -60,7 +60,7 @@
 					<div class="group-btn">
 						<input type="hidden" name="id" value="<?php echo $cedula;?>">
 						<input type="submit" class="btn btn-primary" value="Editar" name="actu">
-						<a href="./../registrate.php">volver</a>
+						<a href="../../registrate.php">volver</a>
 					</div>
 				</form>	
 			</div>

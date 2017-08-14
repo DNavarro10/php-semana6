@@ -14,17 +14,17 @@
 		}
 
 
-	$id = $_GET['id'];
+	$id = $_GET['precioUnitario'];
 
 
-	$result = mysqli_query($conn, "SELECT * FROM usuarios WHERE cedula = $id");
+	$result = mysqli_query($conn, "SELECT * FROM productos WHERE idProductos = $id");
 
 	while($mostrar = mysqli_fetch_array($result))
 		{
-			$cedula = $mostrar['cedula'];
+			$cedula = $mostrar['idProductos'];
 			$nombre = $mostrar['nombre'];
-			$clave = $mostrar['clave'];
-			$direccion = $mostrar['direccion'];
+			$clave = $mostrar['descripcion'];
+			$direccion = $mostrar['precioUnitario'];
 		
 		}
 ?>

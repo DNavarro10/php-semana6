@@ -13,7 +13,7 @@
 		exit();
 		}
 
-$cedula = $_GET['cedula'];
+$cedula = $_GET['idProductos'];
  
 //deleting the row from table
 $result = mysqli_query($conn, "DELETE FROM productos WHERE idProductos = $cedula");

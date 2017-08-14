@@ -1,15 +1,12 @@
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
+Notice
+: Undefined index: id in
+C:\xampp\htdocs\php-semana6\PHP\productos\asociar.producto.php
+on line
+17
 
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
 
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
-
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
-
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
-
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
-
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
-
-Notice: Undefined index: cedula in C:\xampp\htdocs\php-semana6\vistas\productos\productos.view.php on line 56
+Warning
+: mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in
+C:\xampp\htdocs\php-semana6\PHP\productos\asociar.producto.php
+on line
+22
