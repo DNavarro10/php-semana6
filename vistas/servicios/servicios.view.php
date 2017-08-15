@@ -22,7 +22,7 @@
 			<nav>
 				<a href="login.php">Inicio</a>
 				<a href="registrate.php">Usuarios</a>
-				<a href="productos.php">Productos</a>
+				<a href="productos.php" >Productos</a>
 				<a href="#" style="background:#f75c0a;">Servicios</a>
 				<a href="#">Compras</a>
 			</nav>
@@ -35,35 +35,31 @@
 					 <div class="main">
 						<div class="formulario">
 							<div class="warp">
-							 <h2>Servicios</h2>
-								<table class="table table-sm table-hover table-striped">
+							 <h2>Agregar Servicios</h2>
+								<table class="table table-responsive table-hover table-striped">
 									<tr>
-										<td>Cedula</td>
-										<td>Rol</td>
+										<td>ID</td>
 										<td>Nombre</td>
-										<td>Clave</td>
-										<td>Direccion</td>
-										<td>Telefono</td>
+										<td>Descripcion</td>
+										<td>Precio * Hora</td>
 										<td>Acciones</td>
 									</tr>
-									<?php include_once("PHP/usuario/mostrar.usuario.php")?>
+									<?php include_once("PHP/servicios/mostrar.servicios.php")?>
 									<?php 
 									/* llenar los campos desde la base de datos*/
 									while($mostrar = mysqli_fetch_array($resultado)) {         
 										echo "<tr>";
-										echo "<td>".$mostrar['cedula']."</td>";
-										echo "<td>".$mostrar['rol']."</td>";
+										echo "<td>".$mostrar['idServicio']."</td>";
 										echo "<td>".$mostrar['nombre']."</td>";
-										echo "<td>".$mostrar['clave']."</td>";    
-										echo "<td>".$mostrar['direccion']."</td>";
-										echo "<td>".$mostrar['telefono']."</td>";    
-										echo "<td><a href=\"vistas/usuarios/registro.editar.view.php?cedula=$mostrar[cedula]\">Editar</a> | <a href=\"PHP/usuario/delete.usuario.php?cedula=$mostrar[cedula]\" onClick=\"return confirm('Desea eliminar?')\">Borrar</a></td>";        
+										echo "<td>".$mostrar['descripcion']."</td>";
+										echo "<td>".$mostrar['precioHora']."</td>";       
+										echo "<td><a href=\"vistas/servicios/servicios.editar.view.php?idServicios=$mostrar[idServicio]\">Editar</a> | <a href=\"PHP/servicios/delete.servicios.php?idServicios=$mostrar[idServicio]\" onClick=\"return confirm('Desea eliminar?')\">Borrar</a></td>";        
 									}
 									?>
 
 								</table>               
 							</div>
-							<a href='vistas/usuarios/usuario.insert.view.php'><button class="btn btn-primary">Nuevo</button></a>
+							<a href='vistas/servicios/servicios.insert.view.php'><button class="btn btn-primary">Nuevo</button></a>
 						</div>
 					</div>
 			</div>

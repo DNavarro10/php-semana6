@@ -36,7 +36,8 @@
 						<div class="formulario">
 							<div class="warp">
 							 <h2>Usuarios</h2>
-								<table class="table table-sm table-hover table-striped">
+							 	
+								<table class="table table-responsive table-hover table-striped">
 									<tr>
 										<td>Cedula</td>
 										<td>Rol</td>
@@ -61,7 +62,8 @@
 									}
 									?>
 
-								</table>               
+								</table>
+							             
 							</div>
 							<a href='vistas/usuarios/usuario.insert.view.php'><button class="btn btn-primary">Nuevo</button></a>
 						</div>

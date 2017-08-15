@@ -14,5 +14,5 @@
 		exit();
 		}
 /* buscar datos */
-$resultado = mysqli_query($conn, "SELECT * FROM usuarios ORDER BY cedula ASC"); 
+$resultado = mysqli_query($conn, "SELECT * FROM servicios ORDER BY idServicio ASC"); 
 ?>

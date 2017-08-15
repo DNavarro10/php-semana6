@@ -13,11 +13,11 @@
 		exit();
 		}
 
-$cedula = $_GET['cedula'];
+$cedula = $_GET['idServicios'];
  
 //deleting the row from table
-$result = mysqli_query($conn, "DELETE FROM usuarios WHERE cedula = $cedula");
+$result = mysqli_query($conn, "DELETE FROM servicios WHERE idServicio = $cedula");
 
-header('location: ../../registrate.php')
+header('location: ../../servicios.php')
 
  ?>

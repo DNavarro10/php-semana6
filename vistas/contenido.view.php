@@ -21,8 +21,8 @@
 				<a href="#" style="background:#f75c0a;">Inicio</a>
 				<a href="registrate.php">Usuarios</a>
 				<a href="productos.php">Productos</a>
-				<a href="#">Servicios</a>
-				<a href="compras.php">Compras</a>
+				<a href="servicios.php">Servicios</a>
+				<a href="$">Compras</a>
 			</nav>
 		</header>
 		

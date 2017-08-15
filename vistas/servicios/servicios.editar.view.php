@@ -1,5 +1,5 @@
-<?php include_once("../PHP/usuario/update.usuario.php");?>
-<?php include_once("../PHP/usuario/asociar.usuario.php");?>
+<?php include_once("../../PHP/servicios/update.servicios.php");?>
+<?php include_once("../../PHP/servicios/asociar.servicios.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,44 +10,32 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script type="text/javascript" charset="utf-8" src="js/jquery-
 	3.2.1.min.js"></script>
-	<link rel="stylesheet" href="./../CSS/style.css">
-	<title>Registro</title>
+	<link rel="stylesheet" href="../../CSS/style.css">
+	<title>Productos</title>
 </head>
 <body>
 	<div class="contenedor">
 		<h1 class="titulo">Editar Datos</h1>
 		<hr class="border">
 			<div class="contenido">
-				<form action="registro.editar.view.php" class="formulario" name="login" method="post">
+				<form action="servicios.editar.view.php" class="formulario" name="login" method="post">
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-id-card-o"></i><input type="text" name="cedula" class="usuario" placeholder="Cedula" value="<?php echo $cedula;?>">
+						<i class="icono izquierda fa fa-circle-o" hidden="hidden"></i><input type="text" name="idServicio" class="password" value="<?php echo $cedula ?>" hidden="hidden">
 					</div>
-					
+				
 					<div class="form-group">
-						<i class="icono izquierda fa fa-id-card"></i><select name="rol" id="rol" class="picker picker2">
-						<option value="Administrador">Administrador</option>
-						<option value="Comprador">Comprador</option></select>
-					</div>
-					
-					<div class="form-group">
-						<i class="icono izquierda fa fa-user-circle"></i><input type="text" name="nombre" class="password" placeholder="Nombre" value="<?php echo $nombre;?>">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="nombre" class="password" placeholder="Nombre" value="<?php echo $nombre ?>" required="required">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-lock"></i><input type="password" name="clave" class="usuario" placeholder="Contraseña" value="<?php echo $clave;?>">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="descripcion" class="usuario" placeholder="Descripcion" value="<?php echo $clave ?>" required="required">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-home"></i><input type="text" name="direccion" class="usuario" placeholder="Dirección" value= "<?php echo $direccion;?>">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="precioHora" class="usuario" placeholder="Precio" value="<?php echo $direccion ?>" required="required">
 					</div>
-					
-					<div class="form-group">
-						<i class="icono izquierda fa fa-phone"></i><input type="text" name="telefono" class="usuario" placeholder="Telefono" value=" <?php echo $telefono;?>">
-					</div>
-					<div class="form-group">
-						
-					</div>
+		
 					
 					<?php if(!empty($errores)): ?>
 						<div class="error">
@@ -60,7 +48,7 @@
 					<div class="group-btn">
 						<input type="hidden" name="id" value="<?php echo $cedula;?>">
 						<input type="submit" class="btn btn-primary" value="Editar" name="actu">
-						<a href="./../registrate.php">volver</a>
+						<a href="../../servicios.php">volver</a>
 					</div>
 				</form>	
 			</div>

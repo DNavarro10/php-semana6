@@ -36,7 +36,7 @@
 						<div class="formulario">
 							<div class="warp">
 							 <h2>Agregar productos</h2>
-								<table class="table table-sm table-hover table-striped">
+								<table class="table table-responsive  table-hover table-striped">
 									<tr>
 										<td>ID</td>
 										<td>Nombre</td>

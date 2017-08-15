@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2017 at 06:20 AM
+-- Generation Time: Aug 16, 2017 at 12:13 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -104,6 +104,16 @@ CREATE TABLE `productos` (
   `precioUnitario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `productos`
+--
+
+INSERT INTO `productos` (`idProductos`, `nombre`, `descripcion`, `precioUnitario`) VALUES
+(1, 'Monitor', '17 pulgadas', 3000),
+(2, 'Teclado', 'simple', 1000),
+(3, 'Procesador', 'Intel', 12000),
+(5, 'mause', 'color blanco', 123);
+
 -- --------------------------------------------------------
 
 --
@@ -116,6 +126,13 @@ CREATE TABLE `servicios` (
   `descripcion` varchar(50) NOT NULL,
   `precioHora` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `servicios`
+--
+
+INSERT INTO `servicios` (`idServicio`, `nombre`, `descripcion`, `precioHora`) VALUES
+(1, 'actulizacion', 'actualiazar equipo', 15000);
 
 -- --------------------------------------------------------
 
@@ -137,7 +154,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`cedula`, `rol`, `nombre`, `clave`, `direccion`, `telefono`) VALUES
-(123, 'administrador', 'diego', 123123, 'canoas', 123212);
+(111, 'administrador', '123', 123, '123', 213),
+(123, 'administrador', 'luis de', 123, 'cuesta', 222);
 
 --
 -- Indexes for dumped tables
@@ -197,7 +215,12 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT for table `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `idProductos` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `idProductos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `servicios`
+--
+ALTER TABLE `servicios`
+  MODIFY `idServicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

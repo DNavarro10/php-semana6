@@ -9,43 +9,31 @@
 	<script type="text/javascript" charset="utf-8" src="js/jquery-
 	3.2.1.min.js"></script>
 	<link rel="stylesheet" href="../../CSS/style.css">
-	<title>Registro</title>
+	<title>Servicios</title>
 </head>
 <body>
 	<div class="contenedor">
-		<h1 class="titulo">Usuario</h1>
+		<h1 class="titulo">Servicio nuevo</h1>
 		<hr class="border">
 			<div class="contenido">
-				<form action="../../registrate.php" class="formulario" name="login" method="post">
+				<form action="../../servicios.php" class="formulario" name="login" method="post">
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-id-card-o"></i><input type="text" name="cedula" class="usuario" placeholder="Cedula" required="">
+						<i class="icono izquierda fa fa-circle-o" hidden="hidden"></i><input type="text" name="idServicio" class="password" value="" hidden="hidden">
 					</div>
-					
+				
 					<div class="form-group">
-						<i class="icono izquierda fa fa-id-card"></i><select name="rol" id="rol" class="picker picker2">
-						<option value="Administrador">Administrador</option>
-						<option value="Comprador">Comprador</option></select>
-					</div>
-					
-					<div class="form-group">
-						<i class="icono izquierda fa fa-user-circle"></i><input type="text" name="nombre" class="password" placeholder="Nombre" required="">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="nombre" class="password" placeholder="Nombre" required="">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-lock"></i><input type="password" name="clave" class="usuario" placeholder="Contraseña" required="">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="descripcion" class="usuario" placeholder="Descripcion" required="">
 					</div>
 					
 					<div class="form-group">
-						<i class="icono izquierda fa fa-home"></i><input type="text" name="direccion" class="usuario" placeholder="Dirección" required="">
+						<i class="icono izquierda fa fa-circle-o"></i><input type="text" name="precioHora" class="usuario" placeholder="Precio" required="">
 					</div>
-					
-					<div class="form-group">
-						<i class="icono izquierda fa fa-phone"></i><input type="text" name="telefono" class="usuario" placeholder="Telefono" required="">
-					</div>
-					<div class="form-group">
-						
-					</div>
+		
 					
 					<?php if(!empty($errores)): ?>
 						<div class="error">
@@ -57,7 +45,7 @@
 					
 					<div class="group-btn">
 						<input type="submit" class="btn btn-primary" value="Crear" name="enviar">
-						<a href="../../registrate.php">volver</a>
+						<a href="../../servicios.php">volver</a>
 					</div>
 				</form>	
 			</div>
