@@ -14,7 +14,7 @@
 		}
 
 
-	$id = $_GET['precioUnitario'];
+	$id = $_GET['idProductos'];
 
 
 	$result = mysqli_query($conn, "SELECT * FROM productos WHERE idProductos = $id");

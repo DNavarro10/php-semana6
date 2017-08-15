@@ -18,7 +18,7 @@
 		<h1 class="titulo">Editar Datos</h1>
 		<hr class="border">
 			<div class="contenido">
-				<form action="../../productos.php" class="formulario" name="login" method="post">
+				<form action="productos.editar.view.php" class="formulario" name="login" method="post">
 					
 					<div class="form-group">
 						<i class="icono izquierda fa fa-circle-o" hidden="hidden"></i><input type="text" name="producto" class="password" value="<?php echo $cedula ?>" hidden="hidden">
@@ -46,7 +46,8 @@
 					<?php endif; ?>
 					
 					<div class="group-btn">
-						<input type="submit" class="btn btn-primary" value="Crear" name="enviar">
+						<input type="hidden" name="id" value="<?php echo $cedula;?>">
+						<input type="submit" class="btn btn-primary" value="Editar" name="actu">
 						<a href="../../productos.php">volver</a>
 					</div>
 				</form>	

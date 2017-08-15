@@ -27,7 +27,7 @@
 				$resultado = mysqli_query($conn, "UPDATE usuarios SET cedula = $usuario ,rol='$rol', nombre='$nombre',clave= $clave ,direccion='$direccion',telefono=$telefono WHERE cedula='$id'");
 			}
 				/*Redoreccionar a index*/
-				header("Location: ../registrate.php");
+				header("Location: ../../registrate.php");
 				mysqli_close($conn);
 			}
 
